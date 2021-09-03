@@ -1,0 +1,55 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.6rem;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  color: rgb(241, 241, 241);
+}
+.app {
+  width: 70%;
+  min-width: 400px;
+  max-width: 800px;
+  background: #360033; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #0b8793,
+    #360033
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #0b8793,
+    #360033
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 14px;
+  margin: 40px 10px;
+  padding: 20px 40px;
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.307);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.app:hover {
+  transform: scale(1.05);
+}
+
+.title {
+  text-decoration: underline greenyellow;
+}
+
+@media (max-width: 1025px) {
+  body {
+    font-size: 1.2rem;
+  }
+  .app {
+    min-width: 200px;
+  }
+}

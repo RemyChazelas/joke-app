@@ -1,5 +1,7 @@
 const header = document.getElementById("header");
 const text = document.getElementById("content");
+const emoji = document.getElementById("emoji");
+
 
 function getJoke() {
     fetch("https://api.blablagues.net/?rub=blagues")
@@ -16,4 +18,19 @@ function getJoke() {
 
 getJoke();
 
-document.body.addEventListener("click", getJoke);
+function getEmoji() {
+
+
+    fetch("https://api-ascii-emojis.herokuapp.com/")
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data);
+            const content = data[Math.floor(Math.random() * data.length)].descr;
+            console.log(content);
+            emoji.textContent = content;
+        });
+}
+
+getEmoji();
+
+document.body.addEventListener("click", getJoke, getEmoji);

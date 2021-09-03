@@ -45,6 +45,10 @@ body {
   text-decoration: underline greenyellow;
 }
 
+span {
+  color: greenyellow;
+}
+
 @media (max-width: 1025px) {
   body {
     font-size: 1.2rem;

@@ -24,13 +24,12 @@ function getEmoji() {
     fetch("https://api-ascii-emojis.herokuapp.com/")
         .then((res) => res.json())
         .then((data) => {
-            console.log(data);
-            const content = data[Math.floor(Math.random() * data.length)].descr;
-            console.log(content);
-            emoji.textContent = content;
+            const content = data;
+            emoji.textContent = content.descr;
         });
 }
 
 getEmoji();
 
-document.body.addEventListener("click", getJoke, getEmoji);
+document.body.addEventListener("click", getJoke);
+document.body.addEventListener("click", getEmoji);
